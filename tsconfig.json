@@ -13,18 +13,11 @@
     "emitDecoratorMetadata": true,
     "isolatedModules": false,
     "moduleResolution": "node",
-    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitOverride": true,
     "resolveJsonModule": true,
-    "noUncheckedIndexedAccess": true,
-    "typeRoots": [
-      "./node_modules/@types",
-      "./common/types/custom"
-    ]
-  },
-  "ts-node": {
-    "files": true,
-    // ultra fast compiler, but no type-checks
-//    "swc": true
+    "noUncheckedIndexedAccess": true
   },
   "exclude": [
     "node_modules",

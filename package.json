@@ -2,14 +2,25 @@
   "name": "skyground-fetchers",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "NODE_OPTIONS='--es-module-specifier-resolution=node' ts-node-esm ./main.ts",
+    "start:dev:extractors": "NODE_OPTIONS='--es-module-specifier-resolution=node' node --loader ts-node/esm  --inspect ./main.ts extractors"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "amqp-connection-manager": "^4.1.14",
+    "pg": "^8.13.0",
+    "redis": "^4.7.0",
+    "typeorm": "0.3.18-dev.ff6e875",
+    "zod": "^3.23.8"
   }
 }
